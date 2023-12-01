@@ -25,7 +25,7 @@ class ScoreManager {
 
     // Formatage de la date actuelle
     String formattedDate =
-        DateFormat('yyyy-MM-dd – kk:mm').format(DateTime.now());
+        DateFormat('dd/MM/yyyy HH:mm').format(DateTime.now());
 
     // Ajout du score et de la date
     scoreStrings.add('$newScore - $formattedDate');

@@ -32,7 +32,7 @@ class EndGameScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Meilleurs scores',
+                'Historique des parties',
                 style: TextStyle(fontSize: 22, color: Colors.amber),
               ),
               FutureBuilder<List<String>>(
