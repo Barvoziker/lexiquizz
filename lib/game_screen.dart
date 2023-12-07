@@ -50,7 +50,6 @@ class _GameScreenState extends State<GameScreen> {
 
   void endGame() async {
     await ScoreManager.saveScore(score);
-    // ignore: use_build_context_synchronously
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -109,7 +108,7 @@ class _GameScreenState extends State<GameScreen> {
       setState(() {
         score += calculateScore(currentWord);
         currentWord = '';
-        pickRandomWord(); // Pick a new word
+        pickRandomWord();
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -130,7 +129,6 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   int calculateScore(String word) {
-    // Calcul du score basé sur la longueur du mot
     return word.length;
   }
 

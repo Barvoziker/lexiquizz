@@ -48,7 +48,6 @@ class EndGameScreen extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: snapshot.data!.length,
                       itemBuilder: (context, index) {
-                        // Splitting the string to separate the score and the date
                         var scoreDetails = snapshot.data![index].split(' - ');
                         var score = scoreDetails[0];
                         var date = scoreDetails[1];
