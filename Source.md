@@ -3,6 +3,31 @@
 ## Logo et gestion des accents
 - [ChatGPT](https://chat.openai.com)
 
+### Prompt pour le logo : Genere moi un logo d'application mobile pour un jeu ou il faut devnier un mot suivant la chaine de caractere donnée.
+
+### Prompt pour les accents : Peux-tu me fournir un exemple de fonction en Dart pour normaliser une chaîne de caractères en remplaçant les lettres accentuées par leurs équivalents sans accent ?
+
+### Reponse : 
+
+Bien sûr, voici une fonction en Dart qui normalise une chaîne de caractères en remplaçant les lettres accentuées par leurs équivalents sans accent :
+
+```dart
+String normalize(String input) {
+    String normalized = input;
+    const accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÝýÿÑñ';
+    const nonAccents =
+        'AAAAAAaaaaaaOOOOOOooooooEEEEeeeeCcIIIIiiiiUUUUuuuuYyyNn';
+
+    for (int i = 0; i < accents.length; i++) {
+      normalized = normalized.replaceAll(accents[i], nonAccents[i]);
+    }
+
+    return normalized;
+}
+```
+
+Cette fonction parcourt chaque caractère de la chaîne `input` et remplace les caractères accentués par leur équivalent sans accent en utilisant deux chaînes constantes : `accents` pour les caractères accentués et `nonAccents` pour leurs correspondants sans accent.
+
 ## Généralités et Animations
 - [Flutter Documentation](https://flutter.dev/docs)
 - [Flutter API Reference](https://api.flutter.dev/)
@@ -37,6 +62,3 @@
 
 ## Gestion des Scores
 - [Reading and Writing Files - Flutter](https://flutter.dev/docs/cookbook/persistence/reading-writing-files)
-
-## Debug
-- [StackOverflow](https://stackoverflow.com)
